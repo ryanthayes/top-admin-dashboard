@@ -62,7 +62,8 @@ The goal of the project was to demonstrate master of CSS grid by building a full
 
 ### Acknowledgements
 
-[Logo courtesy of](https://www.freepik.com/free-vector/flat-design-programming-company-logo-templates_11827530.htm#query=ux%20logo&position=20&from_view=keyword&track=ais)
+[Logo courtesy of freepik](https://www.freepik.com/free-vector/flat-design-programming-company-logo-templates_11827530.htm#query=ux%20logo&position=20&from_view=keyword&track=ais)
+[Charts courtesy of ByeWind](https://www.figma.com/community/file/1210542873091115123/dashboard-ui-kit-dashboard)
 
 ## Author
 
