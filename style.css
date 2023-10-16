@@ -1,3 +1,77 @@
+/* === CSS VARIABLES === */
+
+:root {
+
+    /* Colors */
+
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-200: hsl(0, 0%, 90%);
+    --clr-neutral-300: hsl(0, 0%, 80%);
+    --clr-neutral-400: hsl(0, 0%, 60%);
+    --clr-neutral-500: hsl(0, 0%, 50%);
+    --clr-neutral-600: hsl(0, 0%, 40%);
+    --clr-neutral-700: hsl(0, 0%, 30%);
+    --clr-neutral-800: hsl(0, 0%, 10%);
+    --clr-neutral-900: hsl(0, 0%, 0%);
+
+    --clr-primary-100: hsl(214, 100%, 97%);
+    --clr-primary-100a: hsla(216, 100%, 97%, 0.90);
+    --clr-primary-200: hsl(213, 97%, 87%);
+    --clr-primary-300: hsl(212, 96%, 78%);
+    --clr-primary-400: hsl(213, 94%, 68%);
+    --clr-primary-500: hsl(217, 91%, 60%);
+    --clr-primary-600: hsl(221, 83%, 53%);
+    --clr-primary-700: hsl(224, 76%, 48%);
+    --clr-primary-800: hsl(226, 71%, 40%);
+    --clr-primary-900: hsl(226, 57%, 21%);
+
+    /* font sizes */
+    --fs-200: .75rem;
+    --fs-300: .875rem;
+    --fs-400: 1rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 2rem;
+    --fs-800: 2.5rem;
+    --fs-900: 3rem;
+
+    /* font weights */
+    --fw-light: 300;
+    --fw-normal: 400;
+    --fw-medium: 500;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+    --fw-black: 900;
+
+    /* font-families */
+    --ff-primary: 'Inter', sans-serif;
+
+    /* Spacing */
+    --spacer-sm: .5em;
+    --spacer-md: 1em;
+    --spacer-lg: 2em;
+
+    /* Border Radius */
+    --br-sm: .5em;
+    --br-md: 1em;
+    --br-lg: 2em;
+
+}
+
+@media (max-width: 35em) {
+    :root {
+        --fs-200: .5rem;
+        --fs-300: .75rem;
+        --fs-400: .875rem;
+        --fs-500: 1rem;
+        --fs-600: 1.25rem;
+        --fs-700: 1.5rem;
+        --fs-800: 1.75rem;
+        --fs-900: 2rem;
+    }
+
+}
+
 /* === CSS RESET === */
 
 /* makes sizing simpler */
@@ -30,4 +104,246 @@ svg,
 video {
   display: block;
   max-width: 100%;
+}
+
+/* === GENERAL STYLES === */
+
+body {
+    font-family: var(--ff-primary);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-normal);
+    line-height: 1.5;
+    color: var(--clr-primary-900);
+    background-color: var(--clr-primary-100);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.2;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: clamp(150px, 20vw, 200px) clamp(600px, 80vw, 1000px);
+
+}
+
+/* Navigation */
+
+.navigation {
+    min-height: 100vh;
+    padding: var(--spacer-md);
+    color: var(--clr-primary-100a);
+    background-color: var(--clr-primary-900);
+    grid-template-columns: 1fr;
+    gap: var(--spacer-lg);
+    align-content: start;
+}
+
+.nav-user-items,
+.nav-settings-items {
+    gap: var(--spacer-sm);
+    list-style: none;
+}
+
+.user-profile {
+    gap: var(--spacer-sm);
+}
+.user-avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.user-handle {
+    font-size: var(--fs-300);
+    font-weight: var(--fw-semi-bold);
+}
+
+.site-logo {
+    width: 35px;
+    opacity: 80%;
+}
+
+/* Dashboard */
+
+.dashboard {
+    background-color: var(--clr-primary-100);
+}
+
+.dashboard-header {
+    grid-template-columns: 3fr 2fr 1fr;
+    gap: var(--spacer-lg);
+    background-color: var(--clr-parent-100);
+}
+
+.dashboard-breadcrumbs {
+    gap: var(--br-md);
+}
+.dashboard-breadcrumbs-title {
+    gap: var(--spacer-sm);
+}
+
+.breadcrumbs-parent {
+    font-weight: var(--fw-medium);
+}
+
+.dashboard-notifications {
+    gap: var(--br-md);
+}
+
+.dashboard-welcome {
+    gap: var(--br-md);
+}
+
+.dashboard-title {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+    color: var(--clr-neutral-700);
+}
+
+.dashboard-analytics {
+    background-color: var(--clr-neutral-100);
+}
+
+.analytics-daily {
+    display: grid;
+    grid-template-areas: 
+    "daily-views daily-visits daily-new-users daily-active-users"
+    "total-active-users total-active-users total-active-users traffic-by-website"
+    "traffic-by-device traffic-by-device traffic-by-location traffic-by-location"
+    "marketing-seo marketing-seo marketing-seo marketing-seo";
+    gap: var(--spacer-md);
+}
+
+.analytics-title {
+    gap: var(--spacer-sm);
+    margin-bottom: var(--spacer-md);
+    font-size: var(--fs-600);
+    font-weight: var(--fw-semi-bold);
+    letter-spacing: 1.2px;
+    color: var(--clr-primary-900);
+}
+
+.analytics-subtitle {
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-primary-900);
+    margin-bottom: var(--spacer-md);
+}
+
+.daily-views,
+.daily-visits,
+.daily-new-users,
+.daily-active-users,
+.total-active-users,
+.traffic-by-website,
+.traffic-by-device,
+.traffic-by-location,
+.marketing-seo {
+    padding: var(--spacer-lg);
+    border-radius: var(--br-sm);
+}
+
+.daily-views,
+.daily-new-users {
+    background-color: var(--clr-primary-300);
+} 
+
+.daily-visits,
+.daily-active-users {
+    background-color: var(--clr-primary-200);
+} 
+
+.total-active-users,
+.traffic-by-website,
+.traffic-by-device,
+.traffic-by-location,
+.marketing-seo {
+    background-color: var(--clr-primary-100);
+}
+
+.daily-stats-content {
+    font-size: var(--fs-600);
+    font-weight: var(--fw-bold);
+}
+
+.daily-trends {
+    font-size: var(--fs-200);
+    font-weight: var(--fw-light);
+    gap: var(--spacer-sm);
+}
+
+.daily-views {
+    grid-area: daily-views;
+}
+.daily-visits {
+    grid-area: daily-visits;
+}
+.daily-new-users {
+    grid-area: daily-new-users;
+}
+.daily-active-users {
+    grid-area: daily-active-users;
+}
+.total-active-users {
+    grid-area: total-active-users;
+}
+.traffic-by-website {
+    grid-area: traffic-by-website;
+}
+.traffic-by-device {
+    grid-area: traffic-by-device;
+}
+.traffic-by-location {
+    grid-area: traffic-by-location;
+}
+.marketing-seo {
+    grid-area: marketing-seo;
+}
+
+.total-active-users-header {
+    gap: var(--spacer-md);
+}
+
+.total-active-users-current,
+.total-active-users-previous {
+    margin-bottom: var(--spacer-md);
+}
+.total-active-users-year {
+    gap: var(--spacer-md);
+}
+
+
+/* Buttons */
+
+
+
+/* Utility Classes */
+
+.container {
+    padding: var(--spacer-md);
+}
+.grid {
+    display: grid;
+}
+.flex {
+    display: flex;
+}
+.align-items-center {
+    align-items: center;
+}
+.justify-content-center {
+    justify-content: center;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+.text-align-center {
+    text-align: center;
+}
+.push-right {
+    margin-left: auto;
 }
