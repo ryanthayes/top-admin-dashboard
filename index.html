@@ -27,7 +27,7 @@
             
             <div class="user-profile flex align-items-center">
                 <img src="images/kflynn.jpg" class="user-avatar" alt="">
-                <p class="user-handle">@kflynn</p>
+                <p class="user-name">Kevin Flynn</p>
             </div>
 
             <nav class="nav-user-container">
@@ -75,10 +75,6 @@
            
 
         </section>
-        
-        <!-- <div class="dashboard-welcome flex align-items-center">
-            <h2 class="dashboard-title"><span>Welcome back, </span>Kevin Flynn (@kflynn)</h2>
-        </div> -->
 
         <section id="dashboard" class="dashboard">
             <div class="dashboard-header container flex align-items-center">
@@ -93,10 +89,24 @@
                     </div>
                 </div>
 
-                <div class="dashboard-notifications flex align-items-center push-right">
-                    <iconify-icon icon="mdi:bell"></iconify-icon>
-                    <iconify-icon icon="mdi:inbox-arrow-down"></iconify-icon>
-                    <iconify-icon icon="mdi:calendar-check"></iconify-icon>
+                <div class="dashboard-header-right flex align-items-center">
+                    <div class="dashboard-search">
+                        <form role="search" class="dashboard-search-form flex align-items-center">
+                            <button for="search" class="btn-search flex align-items-center justify-content-center">
+                                <iconify-icon icon="mdi:magnify"></iconify-icon>
+                            </button>
+                            <input type="search" class="dashboard-search-input" placeholder="Search ...">
+                        </form>
+                    </div>
+    
+                    <div class="dashboard-notifications">
+                        <ul class="dashboard-notifications-list flex align-items-center">
+                            <l1 class="dashboard-notifications-list-items"><iconify-icon icon="mdi:bell"></iconify-icon></l1>
+                            <l1 class="dashboard-notifications-list-items">  <iconify-icon icon="mdi:inbox-arrow-down"></iconify-icon></l1>
+                            <l1 class="dashboard-notifications-list-items">  <iconify-icon icon="mdi:calendar-check"></iconify-icon></l1>
+                        </ul>
+                      
+                    </div>
                 </div>
 
             </div>
