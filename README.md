@@ -26,7 +26,7 @@ The goal of the project was to demonstrate master of CSS grid by building a full
 ![Desktop](./images/desktop-preview.png)
 ![Mobile](./images/mobile-preview.png)
 
-### Live set
+### Live site
 
 [Admin Dashboard](https://ryanthayes.github.io/top-admin-dashboard/)
 
