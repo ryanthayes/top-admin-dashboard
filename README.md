@@ -33,7 +33,7 @@ I started by looking at existing admin dashboards from competitors such as Click
 
 ## What I learned
 
-I learned about :not(:placeholder-shown) to highlight the search box input field when the user selects. I also learned how to position the submit button inside of the input field.
+I learned about :not(:placeholder-shown) to highlight the search box input field when the user selects. I also learned how to position the submit button inside of the input field.``
 
 ```CSS
 .dashboard-search-input {
