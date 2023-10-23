@@ -463,7 +463,8 @@ aside {
 }
 
 @media (max-width: 35em) {
-    .user-name {
+    .user-profile {
         display: none;
     }
+
 }
