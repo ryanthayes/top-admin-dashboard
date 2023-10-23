@@ -27,7 +27,7 @@ I started by looking at existing admin dashboards from competitors such as Click
 ![Alt text](images/mobile-preview.png "a title")
 
 ### Live Version
-**[Admin Dashboard](https://ryanthayes.github.io/top-rock-admin-dashboard/)**
+**[Admin Dashboard](https://ryanthayes.github.io/top-admin-dashboard/)**
 
 ### Built With
 
