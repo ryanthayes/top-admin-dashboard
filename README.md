@@ -1,70 +1,82 @@
-# The Odin Project - Admin Dashboard
+# Admin Dashboard
 
-## Table of contents
+<p align="center">
+  <a href="#overview">Overview</a> •
+  <a href="#what-i-learned">What I learned</a> •
+  <a href="#useful-resources">Useful Resources</a> •
+  <a href="#contact">Contact</a>
+</p>
 
-- [Overview](#overview)
-  - [The goal](#the-goal)
-  - [Preview](#preview)
-  - [Live Site](#live-site)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Features](#features)
-  - [Outcome](#outcome)
-  - [What I learned](#what-i-learned)
-  - [Continued development](#continued-development)
-  - [Proud of](#proud-of)
-  - [Useful resources](#useful-resources)
-  - [Acknowledgements](#acknowledgements)
-- [Author](#author)
+## Overview 
 
-### The goal 
+The purpose of this project was to demonstrate mastery of **CSS Grid** by building a full admin dashboard layout. 
 
-The goal of the project was to demonstrate master of CSS grid by building a full admin dashboard design. 
+I started by looking at existing admin dashboards from competitors such as Clickup and Monday Morning. I then did a wireframe in Figma before stating on the markup and styling.
 
-### Preview
+### Outcomes
 
-![Desktop](./images/desktop-preview.png)
-![Mobile](./images/mobile-preview.png)
+- Used HTML5 **semantic elements** for better readability and structure
+- Used CSS3 **grid** and **flex** to manage layouts
+- Used **Git** and **GitHub** for project management
+- Responsive for both Desktop & Mobile
+
+### Live Version
+**[Admin Dashboard](https://ryanthayes.github.io/top-rock-admin-dashboard/)**
+
+### Built With
+
+ ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)   ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
 ### Live site
 
 [Admin Dashboard](https://ryanthayes.github.io/top-admin-dashboard/)
 
-## My process
+## What I learned
 
-### Built With
+I learned about :not(:placeholder-shown) to highlight the search box input field when the user selects. I also learned how to position the submit button inside of the input field.
 
-![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)   
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+```CSS
+.dashboard-search-input {
+    position: relative;
+    padding: var(--spacer-sm);
+    height: 2rem;
+    font-size: var(--fs-300);
+    font-weight: var(--fw-light);
+    color: var(--clr-primary-800);
+    outline: none;
+    border: none;
+    border-radius: var(--br-sm);
+}
 
-### Features
+.btn-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    background-color: var(--clr-primary-300);
+    border: none;
+    border-top-right-radius: var(--br-sm);
+    border-bottom-right-radius: var(--br-sm);
+    z-index: 1;
+}
 
-- Responsive for both Desktop & Mobile
-- Used **Material Design Icons** for UI
+.dashboard-search-input:not(:placeholder-shown) {
+    border: 1px solid var(--clr-primary-200);
+}
+```
 
-### Outcome
-
-- Used HTML5 **semantic elements** for better readability and structure
-- Used CSS3 **grid** and **flex** to manage layout
-- Used **Git** and **GitHub** for project management
-- **Cross tested** on Firefox and Chromium based browsers
-
-### What I learned
-
-- Use of **CSS Grid Functions** such as clamp to optimally size elements for different sized device screens.
-
-### Proud of
-
-### Useful resources
+## Useful resources
 
 - [Complete CSS Grid Tutorial with Cheat Sheet](https://www.freecodecamp.org/news/css-grid-tutorial-with-cheatsheet/#the-justify-items-property)
 - [Material Design Icons via Iconify.design](https://iconify.design)
 
-### Acknowledgements
+## Acknowledgements
 
 [Logo courtesy of freepik](https://www.freepik.com/free-vector/flat-design-programming-company-logo-templates_11827530.htm#query=ux%20logo&position=20&from_view=keyword&track=ais)
 [Charts courtesy of ByeWind](https://www.figma.com/community/file/1210542873091115123/dashboard-ui-kit-dashboard)
 
-## Author
+## Contact
 
 [![LinkedIN](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ryan-t-hayes/)
